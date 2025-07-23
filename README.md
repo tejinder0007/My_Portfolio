@@ -1,12 +1,44 @@
-# React + Vite
+# 🌐 Tejinder Singh Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website built with **React.js**. This site serves as a digital representation of my professional skills, projects, and contact information. Whether you're a recruiter, collaborator, or fellow developer — I'm excited to share my journey with you.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [Visit My Portfolio](https://your-deployment-link.com)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ **React.js** — Component-based UI
+- 🎨 **Tailwind CSS** — Utility-first styling
+- 🌐 **React Router DOM** — Client-side routing
+- 💻 **VS Code**, **Git**, **GitHub**
+
+---
+
+## 📁 Project Structure
+src/
+├── App.js # Main application file
+├── App.css # Custom styles
+├── Components/
+│ ├── Navbar.js # Top navigation bar
+│ ├── Footer.js # Bottom footer
+│ ├── Home.js # About, Skills, Experience, Philosophy
+│ ├── Projects.js # Portfolio project showcase
+│ ├── Contact.js # Contact form/information
+│ └── Welcome.js # Intro landing page
+
+
+## 💡 Features
+
+- ✨ Animated **Designer/Coder** toggle in the Hero section
+- 🖼️ Image and text-based **project showcase**
+- 📱 Fully **responsive layout** for mobile and desktop
+- 🔗 Smooth **routing** between sections (Home, Projects, Contact)
+- 📩 **Contact page** with styled text and call-to-action
+- 🎨 Modern gradient background and clean typography
+
+
