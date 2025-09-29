@@ -39,8 +39,8 @@ const projectsData = [
     title: 'Portfolio Website',
     description: 'My personal portfolio showcasing skills, projects, and contact information. Built with React and Tailwind CSS.',
     imageUrl: '/portfolio.png', 
-    liveUrl: '',
-    githubUrl: ""
+    liveUrl: 'https://my-portfolio-one-beta-17.vercel.app/',
+    githubUrl: "https://github.com/tejinder0007/My_Portfolio.git"
   },
 ];
 
