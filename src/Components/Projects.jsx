@@ -1,3 +1,4 @@
+// src/Components/Projects.js
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; 
 
@@ -46,10 +47,15 @@ const projectsData = [
 
 function Projects() {
   return (
-    <section className=' px-6 sm:px-10 lg:px-16 bg-gray-50 py-12  shadow-inner animate-fade-in'>
+    // Changed padding to be smaller on mobile (px-4) and larger on desktop
+    <section className='px-4 sm:px-10 lg:px-16 bg-gray-50 py-12 shadow-inner animate-fade-in'>
+      
       <div className='text-center mb-12'>
-        <h1 className='text-5xl font-extrabold text-indigo-800 mb-4 animate-slide-down'>My Projects</h1>
-        <p className='text-xl text-gray-700 animate-fade-in-delayed'>
+        {/* Responsive Text: text-3xl on mobile, 5xl on desktop */}
+        <h1 className='text-3xl md:text-5xl font-extrabold text-indigo-800 mb-4 animate-slide-down'>
+          My Projects
+        </h1>
+        <p className='text-lg md:text-xl text-gray-700 animate-fade-in-delayed'>
           Here you can explore some of my recent work and creations.
         </p>
       </div>
@@ -58,36 +64,43 @@ function Projects() {
         {projectsData.map((project, index) => (
           <div
             key={project.id}
-            className='bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl '
-        
+            className='bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col'
           >
             <img
               src={project.imageUrl}
               alt={project.title}
               className='w-full h-52 object-cover'
             />
-            <div className='p-6'>
-              <h3 className='text-2xl font-bold text-indigo-700 mb-3'>
-                {project.title}
-              </h3>
-              <p className='text-gray-700 text-base mb-4'>
-                {project.description}
-              </p>
-              <div className='flex justify-between items-center mt-4'>
+            
+            {/* Added flex-col and justify-between to make sure buttons stay at the bottom if descriptions vary in length */}
+            <div className='p-6 flex flex-col flex-grow justify-between'>
+              <div>
+                <h3 className='text-2xl font-bold text-indigo-700 mb-3'>
+                  {project.title}
+                </h3>
+                <p className='text-gray-700 text-base mb-6'>
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Button Container: wraps on very small screens if needed */}
+              <div className='flex flex-wrap gap-3 justify-between items-center mt-auto'>
                 <a
                   href={project.liveUrl}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center space-x-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition duration-300 transform hover:-translate-y-1'
+                  // Responsive button text and padding
+                  className='flex-1 flex justify-center items-center space-x-2 px-3 py-2 bg-purple-600 text-white text-sm md:text-base rounded-lg hover:bg-purple-700 transition duration-300 transform hover:-translate-y-1 min-w-[120px]'
                 >
                   <FaExternalLinkAlt />
                   <span>Live Demo</span>
                 </a>
+                
                 <a
                   href={project.githubUrl}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition duration-300 transform hover:-translate-y-1'
+                  className='flex-1 flex justify-center items-center space-x-2 px-3 py-2 bg-gray-800 text-white text-sm md:text-base rounded-lg hover:bg-gray-900 transition duration-300 transform hover:-translate-y-1 min-w-[100px]'
                 >
                   <FaGithub />
                   <span>GitHub</span>
